@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ActivityIndicatorView",
+        "repositoryURL": "https://github.com/exyte/ActivityIndicatorView.git",
+        "state": {
+          "branch": null,
+          "revision": "ad484c6e645c41eb298e48f663ac1ed76aedde00",
+          "version": "0.0.6"
+        }
+      },
+      {
+        "package": "QGrid",
+        "repositoryURL": "https://github.com/Q-Mobile/QGrid",
+        "state": {
+          "branch": null,
+          "revision": "804e59f8cb9f66b226685e9369fb82029742b83a",
+          "version": "0.1.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

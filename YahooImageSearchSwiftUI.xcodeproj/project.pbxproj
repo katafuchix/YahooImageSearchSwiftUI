@@ -3,23 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310BB9842647DD2700F0F286 /* UIApplication+extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BB9832647DD2700F0F286 /* UIApplication+extended.swift */; };
+		312F05272647CB4E00D8E703 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 312F05262647CB4E00D8E703 /* QGrid */; };
 		314520CB2647BB9600CC69BB /* YahooImageSearchSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314520CA2647BB9600CC69BB /* YahooImageSearchSwiftUIApp.swift */; };
 		314520CD2647BB9600CC69BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314520CC2647BB9600CC69BB /* ContentView.swift */; };
 		314520CF2647BB9800CC69BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314520CE2647BB9800CC69BB /* Assets.xcassets */; };
 		314520D22647BB9800CC69BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314520D12647BB9800CC69BB /* Preview Assets.xcassets */; };
+		314520E72647C00800CC69BB /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314520E62647C00800CC69BB /* ImageData.swift */; };
+		3176611A2647CDC1005AC722 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317661192647CDC1005AC722 /* GridCell.swift */; };
+		319D33E22647E9EB00BF8616 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 319D33E12647E9EB00BF8616 /* ActivityIndicatorView */; };
+		31B054612647E5780098D573 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B054602647E5780098D573 /* Constants.swift */; };
+		DF1CA40FDB1A20E2CC20F326 /* Pods_YahooImageSearchSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCE32B273833F900893FFCF /* Pods_YahooImageSearchSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		310BB9832647DD2700F0F286 /* UIApplication+extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extended.swift"; sourceTree = "<group>"; };
 		314520C72647BB9600CC69BB /* YahooImageSearchSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YahooImageSearchSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		314520CA2647BB9600CC69BB /* YahooImageSearchSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooImageSearchSwiftUIApp.swift; sourceTree = "<group>"; };
 		314520CC2647BB9600CC69BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		314520CE2647BB9800CC69BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		314520D12647BB9800CC69BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		314520D32647BB9800CC69BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		314520E62647C00800CC69BB /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		317661192647CDC1005AC722 /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		31B054602647E5780098D573 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9DCE32B273833F900893FFCF /* Pods_YahooImageSearchSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YahooImageSearchSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312F05272647CB4E00D8E703 /* QGrid in Frameworks */,
+				319D33E22647E9EB00BF8616 /* ActivityIndicatorView in Frameworks */,
+				DF1CA40FDB1A20E2CC20F326 /* Pods_YahooImageSearchSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11FF9BFA4A3C0A9475217B28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DCE32B273833F900893FFCF /* Pods_YahooImageSearchSwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		310BB9822647DD0E00F0F286 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				310BB9832647DD2700F0F286 /* UIApplication+extended.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		314520BE2647BB9600CC69BB = {
 			isa = PBXGroup;
 			children = (
 				314520C92647BB9600CC69BB /* YahooImageSearchSwiftUI */,
 				314520C82647BB9600CC69BB /* Products */,
+				11FF9BFA4A3C0A9475217B28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,8 +84,12 @@
 		314520C92647BB9600CC69BB /* YahooImageSearchSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				310BB9822647DD0E00F0F286 /* Extension */,
+				317661182647CDB0005AC722 /* View */,
+				314520E52647BFE600CC69BB /* Model */,
 				314520CA2647BB9600CC69BB /* YahooImageSearchSwiftUIApp.swift */,
 				314520CC2647BB9600CC69BB /* ContentView.swift */,
+				31B054602647E5780098D573 /* Constants.swift */,
 				314520CE2647BB9800CC69BB /* Assets.xcassets */,
 				314520D32647BB9800CC69BB /* Info.plist */,
 				314520D02647BB9800CC69BB /* Preview Content */,
@@ -67,6 +103,22 @@
 				314520D12647BB9800CC69BB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		314520E52647BFE600CC69BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				314520E62647C00800CC69BB /* ImageData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		317661182647CDB0005AC722 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				317661192647CDC1005AC722 /* GridCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +137,10 @@
 			dependencies = (
 			);
 			name = YahooImageSearchSwiftUI;
+			packageProductDependencies = (
+				312F05262647CB4E00D8E703 /* QGrid */,
+				319D33E12647E9EB00BF8616 /* ActivityIndicatorView */,
+			);
 			productName = YahooImageSearchSwiftUI;
 			productReference = 314520C72647BB9600CC69BB /* YahooImageSearchSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +168,10 @@
 				Base,
 			);
 			mainGroup = 314520BE2647BB9600CC69BB;
+			packageReferences = (
+				312F05252647CB4E00D8E703 /* XCRemoteSwiftPackageReference "QGrid" */,
+				319D33E02647E9EB00BF8616 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
+			);
 			productRefGroup = 314520C82647BB9600CC69BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +198,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				314520E72647C00800CC69BB /* ImageData.swift in Sources */,
 				314520CD2647BB9600CC69BB /* ContentView.swift in Sources */,
+				310BB9842647DD2700F0F286 /* UIApplication+extended.swift in Sources */,
 				314520CB2647BB9600CC69BB /* YahooImageSearchSwiftUIApp.swift in Sources */,
+				3176611A2647CDC1005AC722 /* GridCell.swift in Sources */,
+				31B054612647E5780098D573 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +392,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		312F05252647CB4E00D8E703 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+		319D33E02647E9EB00BF8616 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		312F05262647CB4E00D8E703 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 312F05252647CB4E00D8E703 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+		319D33E12647E9EB00BF8616 /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 319D33E02647E9EB00BF8616 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 314520BF2647BB9600CC69BB /* Project object */;
 }
