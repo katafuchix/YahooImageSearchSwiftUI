@@ -17,11 +17,22 @@ struct GridCell: View {
     
     var body: some View {
         VStack {
-            Image(uiImage: container.image)
-                .resizable()
-                .frame(width: 100, height: 100)
-                .scaledToFit()
-                .clipShape(Circle())
+            if #available(iOS 15.0, *) {
+                AsyncImage(url: imageData.url) { image in
+                    image.resizable()
+                        .frame(width: 100, height: 100)
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(Circle())
+                } placeholder: {
+                    ProgressView()
+                }
+            } else {
+                Image(uiImage: container.image)
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .scaledToFit()
+                    .clipShape(Circle())
+            }
         }
     }
 }

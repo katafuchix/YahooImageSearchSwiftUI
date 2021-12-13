@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,8 +16,8 @@
 		314520E72647C00800CC69BB /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314520E62647C00800CC69BB /* ImageData.swift */; };
 		3176611A2647CDC1005AC722 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317661192647CDC1005AC722 /* GridCell.swift */; };
 		319D33E22647E9EB00BF8616 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 319D33E12647E9EB00BF8616 /* ActivityIndicatorView */; };
+		31AB03042766F2AE00D9EC52 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AB03032766F2AE00D9EC52 /* ImageLoader.swift */; };
 		31B054612647E5780098D573 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B054602647E5780098D573 /* Constants.swift */; };
-		DF1CA40FDB1A20E2CC20F326 /* Pods_YahooImageSearchSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCE32B273833F900893FFCF /* Pods_YahooImageSearchSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +30,7 @@
 		314520D32647BB9800CC69BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		314520E62647C00800CC69BB /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		317661192647CDC1005AC722 /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		31AB03032766F2AE00D9EC52 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		31B054602647E5780098D573 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9DCE32B273833F900893FFCF /* Pods_YahooImageSearchSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YahooImageSearchSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -41,7 +42,6 @@
 			files = (
 				312F05272647CB4E00D8E703 /* QGrid in Frameworks */,
 				319D33E22647E9EB00BF8616 /* ActivityIndicatorView in Frameworks */,
-				DF1CA40FDB1A20E2CC20F326 /* Pods_YahooImageSearchSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +84,7 @@
 		314520C92647BB9600CC69BB /* YahooImageSearchSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				31AB03022766F2A300D9EC52 /* Util */,
 				310BB9822647DD0E00F0F286 /* Extension */,
 				317661182647CDB0005AC722 /* View */,
 				314520E52647BFE600CC69BB /* Model */,
@@ -119,6 +120,14 @@
 				317661192647CDC1005AC722 /* GridCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		31AB03022766F2A300D9EC52 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				31AB03032766F2AE00D9EC52 /* ImageLoader.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +169,7 @@
 				};
 			};
 			buildConfigurationList = 314520C22647BB9600CC69BB /* Build configuration list for PBXProject "YahooImageSearchSwiftUI" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -198,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31AB03042766F2AE00D9EC52 /* ImageLoader.swift in Sources */,
 				314520E72647C00800CC69BB /* ImageData.swift in Sources */,
 				314520CD2647BB9600CC69BB /* ContentView.swift in Sources */,
 				310BB9842647DD2700F0F286 /* UIApplication+extended.swift in Sources */,
@@ -261,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -316,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -14,3 +14,9 @@ struct ImageData: Identifiable {
     var id = UUID()
     let url: URL
 }
+
+// エラー
+enum ImageError: Error {
+    case serverError
+    case noData
+}

@@ -11,6 +11,8 @@ import ActivityIndicatorView
 
 struct ContentView: View {
     
+    @StateObject var imageLoader = ImageLoader()
+    
     @State var text = ""
     @State private var buttonEnabled = false
     @State private var imageDatas = [ImageData]()
@@ -35,8 +37,22 @@ struct ContentView: View {
             Button(action: {
                 // キーボードを下げる
                 UIApplication.shared.endEditing()
+                
                 // 検索
-                self.loadData()
+                if #available(iOS 15.0, *) {
+                    Task {
+                        do {
+                            // 画像検索
+                            try await imageLoader.search(text)
+                        } catch {
+                            print(error)
+                        }
+                    }
+                } else {
+                    // 画像検索
+                    self.loadData()
+                }
+                
             }) {
                 Text ("Search")
             }.disabled(buttonEnabled == false)
@@ -47,21 +63,31 @@ struct ContentView: View {
                 .frame(width: 50.0, height: 50.0)
             
             // 検索結果をグリッド表示
-            QGrid(self.imageDatas,
-                  columns: 3,
-                  columnsInLandscape: 5,
-                  vSpacing: 16,
-                  hSpacing: 8,
-                  vPadding: 16,
-                  hPadding: 16,
-                  isScrollable: true,
-                  showScrollIndicators: false
-            ) { data in
-                GridCell(imageData: data,  container: ImageContainer(from: data.url))
+            
+            if #available(iOS 15.0, *) {
+                QGrid(imageLoader.imageList, columns: 3,
+                      columnsInLandscape: 5,
+                      vSpacing: 16, hSpacing: 8,
+                      vPadding: 16,hPadding: 16,
+                      isScrollable: true, showScrollIndicators: false
+                ) { data in
+                    GridCell(imageData: data, container: ImageContainer(from: data.url))
+                }
+            } else {
+                QGrid(self.imageDatas,
+                      columns: 3,
+                      columnsInLandscape: 5,
+                      vSpacing: 16, hSpacing: 8,
+                      vPadding: 16,hPadding: 16,
+                      isScrollable: true, showScrollIndicators: false
+                ) { data in
+                    GridCell(imageData: data,  container: ImageContainer(from: data.url))
+                }
             }
         }
     }
     
+    // iOS15 以前の処理
     // データ取得 VMなどで別にしたい
     func loadData() {
         // 検索結果を初期化
